@@ -3,6 +3,7 @@ import tornado.web
 
 from handlers.report.create import CreateReportHandler
 from handlers.report.list import ReportListHandler
+from handlers.report.update import ReportUpdateHandler
 from handlers.report.view import ReportViewHandler
 from handlers.role.create import CreateRoleHandler
 from handlers.role.list import RoleListHandler
@@ -34,6 +35,7 @@ def make_app():
         (r"/report/create", CreateReportHandler),
         (r"/report/list", ReportListHandler),
         (r"/report/(\d+$)", ReportViewHandler),
+        (r"/report/update", ReportUpdateHandler),
 
         (r"/device/create", CreateDeviceHandler),
         (r"/device/list", DeviceListHandler),
